@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,8 +67,14 @@ public class PageFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_page, container, false);
-        TextView textView = (TextView) view.findViewById(R.id.textView);
-        textView.setText("第" + mParam1 + "页");
+        RecyclerView rv = (RecyclerView) view.findViewById(R.id.recyclerview);
+        // 创建一个线性布局管理器
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        // 设置布局管理器
+        rv.setLayoutManager(layoutManager);
+        rv.setAdapter(new MyRecyclerViewAdapter());
+
         return view;
     }
 

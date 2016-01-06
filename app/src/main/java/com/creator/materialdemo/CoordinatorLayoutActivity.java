@@ -22,19 +22,11 @@ public class CoordinatorLayoutActivity extends AppCompatActivity {
     }
 
     public void initViews() {
-//        ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
-//        MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
-//        viewPager.setAdapter(adapter);
-//
-//        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-//        tabLayout.setupWithViewPager(viewPager);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
+        MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
 
-        RecyclerView rv = (RecyclerView) findViewById(R.id.rv);
-        // 创建一个线性布局管理器
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        // 设置布局管理器
-        rv.setLayoutManager(layoutManager);
-        rv.setAdapter(new MyRecyclerViewAdapter());
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        tabLayout.setupWithViewPager(viewPager);
     }
 }
