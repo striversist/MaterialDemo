@@ -44,4 +44,8 @@ public class MainActivity extends AppCompatActivity {
     public void onTabLayout(View view) {
         startActivity(new Intent(this, TabLayoutActivity.class));
     }
+
+    public void onAppBarLayout(View view) {
+        startActivity(new Intent(this, AppBarLayoutActivity.class));
+    }
 }
