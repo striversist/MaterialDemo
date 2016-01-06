@@ -48,4 +48,8 @@ public class MainActivity extends AppCompatActivity {
     public void onAppBarLayout(View view) {
         startActivity(new Intent(this, AppBarLayoutActivity.class));
     }
+
+    public void onCoordinatorLayout(View view) {
+        startActivity(new Intent(this, CoordinatorLayoutActivity.class));
+    }
 }
