@@ -52,4 +52,8 @@ public class MainActivity extends AppCompatActivity {
     public void onCoordinatorLayout(View view) {
         startActivity(new Intent(this, CoordinatorLayoutActivity.class));
     }
+
+    public void onCollapsingToolbarLayout(View view) {
+        startActivity(new Intent(this, CollapsingToolbarLayoutActivity.class));
+    }
 }

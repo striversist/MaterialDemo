@@ -27,4 +27,11 @@
         android:onClick="onCoordinatorLayout"
         android:textAllCaps="false"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OpenCollapsingToolbarLayout"
+        android:onClick="onCollapsingToolbarLayout"
+        android:textAllCaps="false"/>
+
 </LinearLayout>
