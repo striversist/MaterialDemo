@@ -34,6 +34,9 @@ public class TabLayoutActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
+        if (tabLayout.getTabCount() > 0) {
+            tabLayout.getTabAt(0).setCustomView(R.layout.custom_tab);
+        }
 
         testSnackbar();
     }
